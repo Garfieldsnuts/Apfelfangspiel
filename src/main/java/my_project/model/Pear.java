@@ -27,8 +27,16 @@ public class Pear extends GraphicalObject {
     @Override
     public void update(double dt) {
         //TODO 03 Eine Birne soll von oben herab fallen. Sobald sie unten den Bildschirmrand berührt wird die Methode jumpBack() aufgerufen (siehe TODO 04).
+        y = y + speed*dt;
+        if(y > 1030) {
+            jumpBack();
+        }
     }
 
     //TODO 04 Lege eine Methode jumpBack() an, die bei Aufruf das Pear-Objekt oben am oberen Bildschirmrand an einer zufälligen x-Position positioniert.
+    public void  jumpBack(){
+        y = -30;
+        x = Math.random()*1000;
+    }
 }
 

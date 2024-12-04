@@ -20,7 +20,7 @@ public class Player extends InteractiveGraphicalObject {
     public Player(double x, double y){
         this.x = x;
         this.y = y;
-        speed = 150;
+        speed = 450;
         width = 80;
         height = 40;
 
@@ -41,10 +41,14 @@ public class Player extends InteractiveGraphicalObject {
     public void update(double dt) {
         //TODO 05 Überarbeiten Sie die Update-Methode derart, dass ein Player-Objekt nicht den Bildschirm verlassen kann und immer zu sehen ist.
         if(direction == 0){
-            x = x + speed*dt;
+            if(x < 1000 - width) {
+                x = x + speed * dt;
+            }
         }
         if(direction == 2){
-            x = x - speed*dt;
+            if(x > 0) {
+                x = x - speed * dt;
+            }
         }
     }
 
