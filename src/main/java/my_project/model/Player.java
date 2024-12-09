@@ -23,6 +23,7 @@ public class Player extends InteractiveGraphicalObject {
         speed = 450;
         width = 80;
         height = 40;
+        points = 0;
 
         this.keyToGoLeft    = KeyEvent.VK_A;
         this.keyToGoRight   = KeyEvent.VK_D;
@@ -35,6 +36,7 @@ public class Player extends InteractiveGraphicalObject {
         drawTool.drawFilledRectangle(x,y,width,height);
         drawTool.setCurrentColor(0,0,0,255);
         drawTool.drawRectangle(x,y,width,height);
+        drawTool.drawText(50,50,"Points: " + points);
     }
 
     @Override
@@ -71,4 +73,12 @@ public class Player extends InteractiveGraphicalObject {
             direction = -1;
         }
     }
+
+   public void addPoints(){
+    points = points + 1;
+   }
+
+   public void loosePoints(){
+        points = points - 1;
+   }
 }

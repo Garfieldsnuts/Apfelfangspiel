@@ -38,6 +38,8 @@ public class Background extends GraphicalObject {
     @Override
     public void update(double dt) {
 
+
     }
+
 
 }

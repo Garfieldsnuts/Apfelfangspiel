@@ -22,6 +22,9 @@ public class ProgramController {
     private Pear pear01;
     private Player player01;
 
+
+
+
     /**
      * Konstruktor
      * Dieser legt das Objekt der Klasse ProgramController an, das den Programmfluss steuert.
@@ -60,10 +63,20 @@ public class ProgramController {
     public void updateProgram(double dt){
         //TODO 08 Nachdem Sie die TODOs 01-07 erledigt haben: Setzen Sie um, dass im Falle einer Kollision (siehe TODO 06 bzw. 07) zwischen dem Spieler und dem Apfel bzw. dem Spieler und der Birne, die jumpBack()-Methode von dem Apfel bzw. der Birne aufgerufen wird.
         //Weitere TODOs folgen und werden im Unterricht formuliert. Spätestens nach TODO 08 sollte der Aufbau des Projekts durchdacht werden.
+        if (checkAndHandleCollision(apple01)) {apple01.jumpBack(); player01.addPoints();}
+        if (checkAndHandleCollision(pear01)) {pear01.jumpBack(); player01.addPoints();}
+        //if a.collidesWith(player01){}
+        //if (apple01.collidesWith(player01)){apple01.jumpBack();}
+
     }
 
     //TODO 06 Fügen Sie eine Methode checkAndHandleCollision(Apple a) hinzu. Diese gibt true zurück, falls das Apple-Objekt mit dem Player-Objekt kollidiert. Nutzen Sie hierzu die collidesWith-Methode der Klasse GraphicalObject.
-    public  void checkAndHandleCollision(Apple a)
+    public boolean checkAndHandleCollision(Apple a){
+        return a.collidesWith(player01);
+    }
 
     //TODO 07 Fügen Sie eine Methode checkAndHandleCollision(Pear p) hinzu. Diese gibt true zurück, falls das Pear-Objekt mit dem Player-Objekt kollidiert. Nutzen Sie hierzu die collidesWith-Methode der Klasse GraphicalObject.
+    public boolean checkAndHandleCollision(Pear p){
+        return p.collidesWith(player01);
+    }
 }
