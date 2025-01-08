@@ -66,7 +66,7 @@ public class ProgramController {
         if (checkAndHandleCollision(apple01)) {apple01.jumpBack(); player01.addPoints();}
         if (checkAndHandleCollision(pear01)) {pear01.jumpBack(); player01.addPoints();}
         //if a.collidesWith(player01){}
-        //if (apple01.collidesWith(player01)){apple01.jumpBack();}
+        //if (apple01.collidesWith(player01)) {apple01.jumpBack();}
 
     }
 

@@ -14,6 +14,11 @@ public class Pear extends GraphicalObject {
         speed = 150;
         width = 25;
         height = 35;
+        this.setNewImage("src/main/resources/graphic/birne.png");
+    }
+
+    @Override
+    public void setNewImage(String pathToImage) {
     }
 
     @Override
