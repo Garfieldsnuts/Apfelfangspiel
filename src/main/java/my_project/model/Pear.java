@@ -14,11 +14,7 @@ public class Pear extends GraphicalObject {
         speed = 150;
         width = 25;
         height = 35;
-        this.setNewImage("src/main/resources/graphic/birne.png");
-    }
-
-    @Override
-    public void setNewImage(String pathToImage) {
+        this.setNewImage("src/main/resources/graphic/forelle.png");
     }
 
     @Override
@@ -27,6 +23,7 @@ public class Pear extends GraphicalObject {
         drawTool.drawFilledRectangle(x,y,width,height);
         drawTool.setCurrentColor(0,0,0,255);
         drawTool.drawRectangle(x,y,width,height);
+        drawTool.drawImage(this.getMyImage(),this.x,this.y);
     }
 
     @Override
