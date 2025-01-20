@@ -6,7 +6,7 @@ import KAGO_framework.view.DrawTool;
 public class Pear extends Fruit {
 
     //Attribute
-    private double speed;
+
 
     public Pear(double x, double y){
         this.x = x;
@@ -35,10 +35,12 @@ public class Pear extends Fruit {
         }
     }
 
-    //TODO 04 Lege eine Methode jumpBack() an, die bei Aufruf das Pear-Objekt oben am oberen Bildschirmrand an einer zufälligen x-Position positioniert.
-    public void  jumpBack(){
-        y = -30;
-        x = Math.random()*1000;
-    }
+    //TODO 02 Lege eine Methode jumpBack() an, die bei Aufruf das Apple-Objekt oben am oberen Bildschirmrand an einer zufälligen x-Position positioniert.
+//    public void  jumpBack(){
+//        y = -30;
+//        x = Math.random()*1000;
+//    }
+//}
+
 }
 
