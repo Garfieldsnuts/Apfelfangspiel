@@ -2,11 +2,23 @@ package my_project.model;
 
 import KAGO_framework.model.GraphicalObject;
 import KAGO_framework.view.DrawTool;
+import my_project.control.ProgramController;
 
 public class Fruit extends GraphicalObject {
+    // Attribute
+    protected double speed;
 
-    protectet double speed;
-    this.speed = 150;
+    //Refferenzen
+    protected Player player01;
+    protected ProgramController pc;
+
+    public Fruit(double x,double y, Player player01, ProgramController pc){
+        this.x = x;
+        this.y = y;
+        this.player01 = player01;
+        this.pc = pc;
+        speed = 150;
+    }
 
     @Override
     public void draw(DrawTool drawTool) {

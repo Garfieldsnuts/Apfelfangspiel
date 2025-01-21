@@ -9,11 +9,11 @@ public class Pear extends Fruit {
 
 
     public Pear(double x, double y){
-        this.x = x;
-        this.y = y;
-        speed = 150;
-        width = 25;
-        height = 35;
+        //this.x = x;
+        //this.y = y;
+        //speed = 150;
+        //width = 25;
+        //height = 35;
         this.setNewImage("src/main/resources/graphic/forelle.png");
     }
 
