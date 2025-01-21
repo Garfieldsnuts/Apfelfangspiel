@@ -15,6 +15,7 @@ public class Apple extends Fruit {
         this.setNewImage("src/main/resources/graphic/Marcel.png");
     }
 
+
     @Override
     public void update(double dt) {
         //TODO 01 Ein Apfel soll von oben herab fallen. Sobald er unten den Bildschirmrand berührt wird die Methode jumpBack() aufgerufen (siehe TODO 02).

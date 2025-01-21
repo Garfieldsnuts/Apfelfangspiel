@@ -17,6 +17,7 @@ public class Pear extends Fruit {
         this.setNewImage("src/main/resources/graphic/forelle.png");
     }
 
+
     @Override
     public void draw(DrawTool drawTool) {
         drawTool.setCurrentColor(0,255,0,255);

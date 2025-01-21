@@ -20,6 +20,7 @@ public class Fruit extends GraphicalObject {
         speed = 150;
     }
 
+
     @Override
     public void draw(DrawTool drawTool) {
         drawTool.setCurrentColor(255,0,0,255);
