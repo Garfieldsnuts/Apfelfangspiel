@@ -74,11 +74,11 @@ public class Player extends InteractiveGraphicalObject {
         }
     }
 
-   public void addPoints(){
-    points = points + 1;
-   }
+    public void addPoints(){
+        points = points + get.Value;
+    }
 
    public void loosePoints(){
-        points = points - 1;
+        points = points - get.value;
    }
 }

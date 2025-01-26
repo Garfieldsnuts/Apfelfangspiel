@@ -12,12 +12,13 @@ public class Fruit extends GraphicalObject {
     protected Player player01;
     protected ProgramController pc;
 
-    public Fruit(double x,double y, Player player01, ProgramController pc){
+    public Fruit(){
         this.x = x;
         this.y = y;
         this.player01 = player01;
         this.pc = pc;
         speed = 150;
+        Value = v;
     }
 
 
@@ -31,5 +32,13 @@ public class Fruit extends GraphicalObject {
     public void  jumpBack(){
         y = -30;
         x = Math.random()*1000;
+    }
+    @Override
+    public void update(double dt) {
+        //TODO 03 Eine Birne soll von oben herab fallen. Sobald sie unten den Bildschirmrand berührt wird die Methode jumpBack() aufgerufen (siehe TODO 04).
+        y = y + speed * dt;
+        if (y > 1030) {
+            jumpBack();
+        }
     }
 }
