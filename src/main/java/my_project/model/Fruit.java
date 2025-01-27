@@ -7,18 +7,16 @@ import my_project.control.ProgramController;
 public class Fruit extends GraphicalObject {
     // Attribute
     protected double speed;
+    protected int value;
 
-    //Refferenzen
-    protected Player player01;
-    protected ProgramController pc;
+    //Referenzen
+    private ProgramController pc;
 
-    public Fruit(){
+    public Fruit(double x, double y, ProgramController pc){
         this.x = x;
         this.y = y;
-        this.player01 = player01;
         this.pc = pc;
         speed = 150;
-        Value = v;
     }
 
 
@@ -32,6 +30,7 @@ public class Fruit extends GraphicalObject {
     public void  jumpBack(){
         y = -30;
         x = Math.random()*1000;
+        pc.addPoints(value);
     }
     @Override
     public void update(double dt) {
@@ -41,4 +40,10 @@ public class Fruit extends GraphicalObject {
             jumpBack();
         }
     }
+
+    public int getValue() {
+        return value;
+    }
+
+
 }
